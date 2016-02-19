@@ -41,7 +41,7 @@ function useBasename(createHistory) {
       if (typeof location === 'string')
         location = parsePath(location)
 
-      const pname = location.pathname
+      const pname = location.path
       const normalizedBasename = basename.slice(-1) === '/' ? basename : basename + '/'
       const normalizedPathname = pname.charAt(0) === '/' ? pname.slice(1) : pname
       const pathname = normalizedBasename + normalizedPathname
